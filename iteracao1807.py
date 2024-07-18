@@ -25,6 +25,32 @@ def mencao():
         mencao = "Nota inválida"
 
     print(f"Sua mencao em apc é:",mencao)
-#mencao()
+mencao()
+
 #Questão 2
 def new_word():
+    word = input("Digite uma palavra: ")
+
+    vowels = 'aeiouAEIOU'
+    num_letters = len(word)
+    num_vowels = sum(1 for char in word if char in vowels)
+    num_consonants = num_letters - num_vowels
+    conc_words = word[:2] + word[-2:]
+    
+    print(f'Número de caracteres: {num_letters}')
+    print(f'Número de vogais: {num_vowels}')
+    print(f'Número de consoantes: {num_consonants}')
+    print(f'Nova palavra: {conc_words}')
+new_word()
+
+#Questão 3
+def verify_comments():
+    commenter = input("Insira o Nome de usuário: ")
+    comment = input ("Insira o seu comentário para verificação: ")
+
+    if "Joana" in comment:
+        print(f"{commenter} fez comentário sobre Joana")
+    else:
+        print(f"{commenter} não fez comentário sobre Joana")
+        
+verify_comments()
